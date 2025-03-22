@@ -7,5 +7,40 @@
 </head>
 <body>
     
+    <h3>Library</h3>
+    <p>Add or Remove Books!</p>
+
+    <div id="main-buttons-container">
+        <button id="add-book-button">Add Book</button>
+        <button id="show-books-button">Show Books</button>
+    </div>
+    
+    <div id="books-container">
+
+    </div>
+
+    <dialog id="add-book-dialog">
+        
+        <h3>Hello</h3>
+        
+        <form id="add-book-form"> 
+            <label>Book Name</label>
+            <input type="text" id="book-name" required>
+
+            <label>Book Author</label>
+            <input type="text" id="book-author" required>
+
+            <label>Total Pages</label>
+            <input type="number" id="book-pages" min="10" required>
+
+            <input type="submit" id="submit-form-button" value="Add">
+
+        </form>
+
+        <button id="close-dialog-button">Close</button>
+
+    </dialog>
+
+    <script src="./script.js"></script>
 </body>
 </html>
