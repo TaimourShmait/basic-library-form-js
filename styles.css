@@ -27,18 +27,6 @@ hr {
     margin: 0.5rem 0 0.5rem 0;
 }
 
-#books-container {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
-
-#book-container {
-    width: 90%;
-    background-color: #EEEEEE;
-    color: rgb(49, 49, 49);
-}
-
 #form {
     display: flex;
     flex-direction: column; 
@@ -86,6 +74,21 @@ hr {
     white-space: nowrap;
 }   
 
+#books-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#book-container {
+    width: 90%;
+    background-color: #EEEEEE;
+    color: rgb(49, 49, 49);
+}
+
 #submit-form-button {
     margin-top: 1rem;
     width: 5rem;
@@ -112,6 +115,13 @@ th {
 
 #table-first-row {
     background-color: #dedede;
+}
+
+table tr:first-child {
+    background-color: #EEEEEE;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #your-books-title {
