@@ -13,40 +13,68 @@
     <div id="main-container">
 
         <h1 id="main-title">Library</h1>
-        <p>Add or Remove Books!</p>
-
-        <div id="main-buttons-container">
-            <button id="add-book-button">Add Book</button>
-            <button id="show-books-button">Show Books</button>
-        </div>
-        
-        <div id="books-container">
-
-        </div>
-
-    </div>
-
-    <dialog id="add-book-dialog">
-        
-        <h3>Hello</h3>
+        <hr>    
+        <p>Add Books</p>
         
         <form id="add-book-form"> 
-            <label>Book Name</label>
-            <input type="text" id="book-name" required>
 
-            <label>Book Author</label>
-            <input type="text" id="book-author" required>
+            <div id="form">
 
-            <label>Total Pages</label>
-            <input type="number" id="book-pages" min="10" required>
+                <div class="label-input-pairs">
+                    <label class="text-input-labels">Book Name</label>
+                    <input type="text" id="book-name" required>
+                </div>
 
-            <input type="submit" id="submit-form-button" value="Add">
+                <div class="label-input-pairs">
+                    <label class="text-input-labels">Book Author</label>
+                    <input type="text" id="book-author" required>
+                </div>
+
+                <div class="label-input-pairs">
+                    <label class="text-input-labels">Total Pages</label>
+                    <input type="number" id="book-pages" min="10" required>
+                </div>
+
+                <div id="book-genre-container">
+                    <label>Book Genre</label>
+                    <div id="radio-buttons-container">
+                        <label>Non-Fiction<input type="radio" name="book-genre" required value="Non-Fiction"></label>
+                        <label>Fiction<input type="radio" name="book-genre" required value="Fiction"></label>
+                        <label>Other<input type="radio" name="book-genre" required value="Other"></label>
+                    </div>
+                </div>
+
+                <input type="submit" id="submit-form-button" value="Add">
+
+            </div>
 
         </form>
 
-        <button id="close-dialog-button">Close</button>
+        <div id="books-container">
+            <h2 id="your-books-title">Books</h2>
+            <table id="books-table">
+                <thead>
+                    <tr id="table-first-row">
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Pages</th>
+                        <th>Read Status</th>
+                    </tr>
+                </thead>
 
-    </dialog>
+                <tr class="placeholder-row">
+                    <th>—</th>
+                    <th>—</th>
+                    <th>—</th>
+                    <th>—</th>
+                    <th>—</th>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
 
     <script src="./script.js"></script>
 </body>
