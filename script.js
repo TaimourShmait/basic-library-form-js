@@ -1,4 +1,5 @@
-// Refactor all of this
+// Main DOM elements and Event Listeners
+
 const mainButtonsContainer = document.querySelector("#main-buttons-container");
 const addBookButton = document.querySelector("#add-book-button");
 const showBooksButton = document.querySelector("#show-books-button");
@@ -11,7 +12,6 @@ const bookNameInput = document.querySelector("#book-name");
 const bookAuthorInput = document.querySelector("#book-author");
 const bookPagesInput = document.querySelector("#book-pages");
 
-// const submitFormButton = document.querySelector("#submit-form-button");
 const closeDialogButton = document.querySelector("#close-dialog-button");
 
 addBookButton.addEventListener("click", () => {
@@ -45,6 +45,8 @@ closeDialogButton.addEventListener("click", () => {
     addBookDialog.close();
 });
 
+// Book Class and related functions
+
 class Book {
     constructor (bookName = "Book", bookAuthor = "John Doe", bookPages = 100) {
         this.bookName = bookName;
@@ -56,6 +58,7 @@ class Book {
             return bookName + " by " + bookAuthor + ", " + bookPages + " pages in total";
         }
     }
+
 }
 
 Book.prototype.toggleReadStatus = function() {this.readStatus = !this.readStatus;}
@@ -100,7 +103,7 @@ function showBooks() {
 
         removeBookButton.addEventListener("click", () => {
             bookContainer.remove();
-            Library.splice(i, 1); // Remove the book for the specifc index from the Library array
+            Library.splice(i, 1); // Removes the book for the specifc index from the Library array
         });
 
         readStatusCheckBox.checked = Library[i].readStatus;
