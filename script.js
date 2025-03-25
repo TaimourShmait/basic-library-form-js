@@ -1,3 +1,4 @@
+// Refactor all of this
 const mainButtonsContainer = document.querySelector("#main-buttons-container");
 const addBookButton = document.querySelector("#add-book-button");
 const showBooksButton = document.querySelector("#show-books-button");
